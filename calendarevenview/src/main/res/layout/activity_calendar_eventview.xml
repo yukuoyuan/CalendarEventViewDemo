@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignWithParentIfMissing="true"
+    android:background="@color/c_f4f7fd"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/c_dbdbdb" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="84px"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_booking_management_week_calendar_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="本月"
+                android:textColor="@color/c_605bf5"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_booking_management_week_calendar_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="周历"
+                android:textColor="@color/c_333333"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_booking_management_week_calendar_date_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50px"
+                android:layout_toLeftOf="@+id/tv_booking_management_week_calendar_date"
+                android:padding="25px"
+                android:text="@string/left"
+                android:textColor="@color/c_333333"
+                android:textSize="12px" />
+
+            <TextView
+                android:id="@+id/tv_booking_management_week_calendar_date_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50px"
+                android:layout_toRightOf="@+id/tv_booking_management_week_calendar_date"
+                android:padding="25px"
+                android:text="@string/right"
+                android:textColor="@color/c_333333"
+                android:textSize="12px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/c_dbdbdb" />
+        </RelativeLayout>
+
+        <cn.yky.calendarevenview.view.WeekTopBarView
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginLeft="42dp"
+            android:background="@android:color/white" />
+
+        <cn.yky.calendarevenview.view.ScheduleLayout
+            android:id="@+id/scl_booking_management"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_booking_management_month_calendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <cn.yky.calendarevenview.view.MonthCalendarView
+                            android:id="@+id/mcv_booking_management_month_calendar"
+                            android:layout_width="match_parent"
+                            android:layout_height="288dp"
+                            android:layout_marginLeft="42dp"
+                            android:background="@android:color/white"
+                            android:overScrollMode="never" />
+                    </RelativeLayout>
+
+                    <cn.yky.calendarevenview.view.WeekCalendarView
+                        android:id="@+id/wcv_booking_management_week_calendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/d_48"
+                        android:layout_marginLeft="42dp"
+                        android:background="@android:color/white"
+                        android:overScrollMode="never"
+                        android:visibility="gone"
+                        app:week_show_task_hint="false" />
+
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_booking_management_week_calendar_event_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <cn.yky.calendarevenview.view.WeekCalendarEventView
+                    android:id="@+id/wcev_booking_management_week_event_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    app:leftHourTextSize="11sp"
+                    app:mHourHeight="35dp"
+                    app:mHourWidth="42dp" />
+                <!--</RelativeLayout>-->
+            </LinearLayout>
+
+        </cn.yky.calendarevenview.view.ScheduleLayout>
+    </LinearLayout>
+</LinearLayout>

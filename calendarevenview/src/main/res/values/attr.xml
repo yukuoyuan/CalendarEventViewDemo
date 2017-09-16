@@ -41,4 +41,9 @@
         <attr name="mHourHeight" format="dimension" />
         <attr name="mHourWidth" format="dimension" />
     </declare-styleable>
+    <!--这是一个自定义的顶部的周日到周六的控件属性-->
+    <declare-styleable name="WeekTopBarView">
+        <attr name="week_text_color" format="color" />
+        <attr name="week_text_size" format="dimension" />
+    </declare-styleable>
 </resources>
