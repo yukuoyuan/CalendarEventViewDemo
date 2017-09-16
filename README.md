@@ -2,8 +2,10 @@
 这是一个自定义的周历,月历,以及时间布局的demo
 >此项目不适合直接放到自己的项目中,需要自己改动部分代码去适合自己的业务逻辑
 主要业务逻辑在weekCalendarEventview 中
+
 ##效果图
 
+![效果图](https://github.com/yukuoyuan/CalendarEventViewDemo/blob/master/img/simple.gif)
 
 ##代码的结构
 >src
