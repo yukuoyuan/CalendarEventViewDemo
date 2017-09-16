@@ -6,7 +6,12 @@
 ##效果图
 
 ![效果图](https://github.com/yukuoyuan/CalendarEventViewDemo/blob/master/img/simple.gif)
-
+##功能包含
+* 周历月历联动
+* 当前时间的红线展示
+* 过去时间置灰展示
+* 事件区域事件的回调的监听
+* 空白可以点击的区域的时间回调监听
 ##代码的结构
 >src
 >>main
