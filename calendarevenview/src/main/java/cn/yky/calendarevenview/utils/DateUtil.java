@@ -2,7 +2,6 @@ package cn.yky.calendarevenview.utils;
 
 import android.annotation.SuppressLint;
 import android.text.TextUtils;
-import android.text.format.DateUtils;
 
 import org.joda.time.DateTime;
 
@@ -12,7 +11,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 
 /**
  * Created by yukuoyuan on 2017/9/16.

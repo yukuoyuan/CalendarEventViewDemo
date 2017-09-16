@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--这是一个自定义的周历控件-->
+    <!--这是一个自定义的月历控件-->
     <declare-styleable name="MonthCalendarView">
         <attr name="month_selected_text_color" format="color" />
         <attr name="month_selected_circle_color" format="color" />
@@ -17,5 +17,28 @@
         <attr name="month_show_lunar" format="boolean" />
         <attr name="month_show_holiday_hint" format="boolean" />
         <attr name="month_count" format="integer" />
+    </declare-styleable>
+    <!--这是一个自定义的周历控件-->
+    <declare-styleable name="WeekCalendarView">
+        <attr name="week_selected_text_color" format="color" />
+        <attr name="week_selected_circle_color" format="color" />
+        <attr name="week_selected_circle_today_color" format="color" />
+        <attr name="week_normal_text_color" format="color" />
+        <attr name="week_today_text_color" format="color" />
+        <attr name="week_hint_circle_color" format="color" />
+        <attr name="week_holiday_color" format="color" />
+        <attr name="week_lunar_text_color" format="color" />
+        <attr name="week_day_text_size" format="integer" />
+        <attr name="week_day_lunar_text_size" format="integer" />
+        <attr name="week_show_task_hint" format="boolean" />
+        <attr name="week_show_lunar" format="boolean" />
+        <attr name="week_show_holiday_hint" format="boolean" />
+        <attr name="week_count" format="integer" />
+    </declare-styleable>
+    <!--这是一个自定义周历事件view的控件-->
+    <declare-styleable name="WeekCalendarEventView">
+        <attr name="leftHourTextSize" format="dimension" />
+        <attr name="mHourHeight" format="dimension" />
+        <attr name="mHourWidth" format="dimension" />
     </declare-styleable>
 </resources>
