@@ -35,7 +35,6 @@ proguard/
 captures/
 
 # Intellij
-*.iml
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/gradle.xml
@@ -58,3 +57,11 @@ freeline_project_description.json
 CalendarEventView.iml
 CalendarEventViewDemo.iml
 gradle.properties
+/.idea/
+/gradle/
+!/calendarevenview/src/
+/calendarevenview/calendarevenview.iml
+/CalendarEventViewSimple.iml
+/app/app.iml
+/app/proguard-rules.pro
+/calendarevenview/proguard-rules.pro
