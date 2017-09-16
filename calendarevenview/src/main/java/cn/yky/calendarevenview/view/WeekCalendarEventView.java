@@ -111,6 +111,9 @@ public class WeekCalendarEventView extends ViewPager implements WeekEventView.Ev
 
     public void setData(List<AppointMentAndSchduleListBean.ItemsBean> items) {
         WeekEventView weekEventView = weekEventAdapter.getViews().get(getCurrentItem());
+        if (weekEventView==null){
+            return;
+        }
         weekEventView.setData(items);
     }
 
@@ -141,7 +144,6 @@ public class WeekCalendarEventView extends ViewPager implements WeekEventView.Ev
         WeekEventView weekEventView = weekEventAdapter.getViews().get(getCurrentItem());
         if (weekEventView != null) {
             weekEventView.gotoHour(nowHour);
-
         }
     }
 

@@ -390,4 +390,14 @@ public class DateUtil {
     public String getYearMonthDay(DateTime time) {
         return time.getYear() + "-" + time.getMonthOfYear() + "-" + time.getDayOfMonth();
     }
+    /**
+     * 获取当前小时
+     *
+     * @return
+     */
+    public  int getNowHour() {
+        return Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+
+    }
+
 }

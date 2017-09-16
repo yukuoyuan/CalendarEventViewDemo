@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="cn.yky.calendarevenview.activity.CalendarEventViewActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

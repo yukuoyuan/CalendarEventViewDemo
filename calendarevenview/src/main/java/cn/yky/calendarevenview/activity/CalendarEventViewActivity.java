@@ -1,6 +1,7 @@
 package cn.yky.calendarevenview.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,9 +11,13 @@ import android.widget.Toast;
 
 import org.joda.time.DateTime;
 
+import java.util.List;
+
 import cn.yky.calendarevenview.R;
+import cn.yky.calendarevenview.bean.AppointMentAndSchduleListBean;
 import cn.yky.calendarevenview.bean.WeekCalendarEventBean;
 import cn.yky.calendarevenview.inter.OnCalendarClickListener;
+import cn.yky.calendarevenview.utils.DataUtils;
 import cn.yky.calendarevenview.utils.DateUtil;
 import cn.yky.calendarevenview.utils.StringUtils;
 import cn.yky.calendarevenview.view.MonthCalendarView;
@@ -43,14 +48,6 @@ public class CalendarEventViewActivity extends AppCompatActivity implements View
      * 结束时间
      */
     private DateTime mEndDate;
-    /**
-     * 数据类型
-     */
-    private int type;
-    /**
-     * 是否第一次进入该界面
-     */
-    private boolean isFirst = true;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,6 +60,9 @@ public class CalendarEventViewActivity extends AppCompatActivity implements View
 
     private void initListener() {
         tvBookingManagementWeekCalendarToday.setOnClickListener(this);
+        tvBookingManagementWeekCalendarDateLeft.setOnClickListener(this);
+        tvBookingManagementWeekCalendarDateRight.setOnClickListener(this);
+
     }
 
     private void initdata() {
@@ -121,10 +121,31 @@ public class CalendarEventViewActivity extends AppCompatActivity implements View
      * 获取数据
      */
     private void initAllDoctorListData() {
-        /**
-         * 制造点假数据
-         */
-//        wcevBookingManagementWeekEventView.setData(appointMentAndSchduleListBean.Items);
+
+
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+                /**
+                 * 跳转到当前时间
+                 */
+                wcevBookingManagementWeekEventView.gotoHour(DateUtil.instance().getNowHour());
+            }
+        }, 100);
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+
+                /**
+                 * 制造点假数据
+                 */
+                final List<AppointMentAndSchduleListBean.ItemsBean> tete = DataUtils.instance().getData();
+                new Handler().post(new Runnable() {
+                    @Override
+                    public void run() {
+                        wcevBookingManagementWeekEventView.setData(tete);
+                    }
+                });
+            }
+        }, 6000);
     }
 
     private void initView() {

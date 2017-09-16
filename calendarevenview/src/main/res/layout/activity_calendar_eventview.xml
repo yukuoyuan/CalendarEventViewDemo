@@ -20,7 +20,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="84px"
+            android:layout_height="42dp"
             android:background="@android:color/white">
 
             <TextView
@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="30px"
+                android:layout_marginLeft="15dp"
                 android:text="本月"
                 android:textColor="@color/c_605bf5"
                 android:textSize="28px" />
@@ -47,24 +47,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="50px"
+                android:layout_marginRight="25dp"
                 android:layout_toLeftOf="@+id/tv_booking_management_week_calendar_date"
                 android:padding="25px"
                 android:text="@string/left"
                 android:textColor="@color/c_333333"
-                android:textSize="12px" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tv_booking_management_week_calendar_date_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="50px"
+                android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@+id/tv_booking_management_week_calendar_date"
-                android:padding="25px"
+                android:padding="13dp"
                 android:text="@string/right"
                 android:textColor="@color/c_333333"
-                android:textSize="12px" />
+                android:textSize="14sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -118,11 +118,6 @@
                         app:week_show_task_hint="false" />
 
                 </RelativeLayout>
-
-                <!--<RelativeLayout-->
-                <!--android:id="@+id/rl_booking_management_week_calendar_event_view"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent">-->
 
                 <cn.yky.calendarevenview.view.WeekCalendarEventView
                     android:id="@+id/wcev_booking_management_week_event_view"

@@ -243,8 +243,6 @@ public class WeekEventView extends View {
                 for (WeekCalendarEventBean weekCalendarEventBean : weekCalendarEventBeanList) {
                     if (e.getX() > weekCalendarEventBean.left && e.getX() < weekCalendarEventBean.right && e.getY() > weekCalendarEventBean.top && e.getY() < weekCalendarEventBean.bottom) {
                         list.add(weekCalendarEventBean);
-//                        eventClickListener.onEventClick(weekCalendarEventBean);
-//                        return super.onSingleTapUp(e);
                     }
                 }
                 if (!ListUtils.isEmpty(list)) {
@@ -554,7 +552,7 @@ public class WeekEventView extends View {
 //                                    if (date.toDate().getTime() < DateUtil.getNowDatesTime()) {
 //                                        mSchdulePaint.setColor(Color.parseColor("#7Ffed1aa"));
 //                                    } else {
-                                        mSchdulePaint.setColor(Color.parseColor("#fed1aa"));
+                                    mSchdulePaint.setColor(Color.parseColor("#fed1aa"));
 //                                    }
                                     WeekCalendarEventBean weekCalendarEventBean = new WeekCalendarEventBean();
                                     weekCalendarEventBean.left = left;
@@ -611,11 +609,7 @@ public class WeekEventView extends View {
                                     /**
                                      * 是否是过去时间设置不同的颜色
                                      */
-//                                    if (date.toDate().getTime() < DateUtil.getNowDatesTime()) {
-//                                        mSchdulePaint.setColor(Color.parseColor("#7Ffed1aa"));
-//                                    } else {
-                                        mSchdulePaint.setColor(Color.parseColor("#fed1aa"));
-//                                    }
+                                    mSchdulePaint.setColor(Color.parseColor("#fed1aa"));
                                     WeekCalendarEventBean weekCalendarEventBean = new WeekCalendarEventBean();
                                     weekCalendarEventBean.left = left;
                                     weekCalendarEventBean.top = top;
@@ -652,8 +646,6 @@ public class WeekEventView extends View {
              * 绘制预约
              */
             for (AppointMentAndSchduleListBean.ItemsBean itemsBean : items) {
-//                LogUtil.d("事件3",itemsBean.Id);
-
                 /**
                  * 矩形的顶部
                  */
@@ -674,7 +666,6 @@ public class WeekEventView extends View {
                  * 首先判断开始时间
                  */
                 for (int i = 0; i < 7; i++) {
-//                    LogUtil.d("事件4",itemsBean.Id);
                     DateTime date = mStartDate.plusDays(i);
                     /**
                      * 如果开始时间是这一天的话
@@ -701,11 +692,7 @@ public class WeekEventView extends View {
                                     /**
                                      * 是否是过去时间设置不同的颜色
                                      */
-//                                    if (date.toDate().getTime() < DateUtil.getNowDatesTime()) {
-//                                        mAppointmentPaint.setColor(Color.parseColor("#7F7a80fa"));
-//                                    } else {
-                                        mAppointmentPaint.setColor(Color.parseColor("#7a80fa"));
-//                                    }
+                                    mAppointmentPaint.setColor(Color.parseColor("#7a80fa"));
                                     WeekCalendarEventBean weekCalendarEventBean = new WeekCalendarEventBean();
                                     weekCalendarEventBean.left = left;
                                     weekCalendarEventBean.top = top;
@@ -761,7 +748,7 @@ public class WeekEventView extends View {
 //                                    if (date.toDate().getTime() < DateUtil.getNowDatesTime()) {
 //                                        mAppointmentPaint.setColor(Color.parseColor("#7F7a80fa"));
 //                                    } else {
-                                        mAppointmentPaint.setColor(Color.parseColor("#7a80fa"));
+                                    mAppointmentPaint.setColor(Color.parseColor("#7a80fa"));
 //                                    }
                                     WeekCalendarEventBean weekCalendarEventBean = new WeekCalendarEventBean();
                                     weekCalendarEventBean.left = left;
