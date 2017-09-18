@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
     <TextView
         android:id="@+id/tv_test_calendar_event_view"
         android:layout_width="match_parent"
@@ -11,6 +15,20 @@
         android:background="@android:color/black"
         android:gravity="center"
         android:text="带事件的格子控件"
+        android:textColor="@android:color/white"
+        android:textSize="32px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <TextView
+        android:id="@+id/tv_test_calendar_start_end"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="选择开始和结束的日历控件"
         android:textColor="@android:color/white"
         android:textSize="32px" />
 </LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_date"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@android:color/white"
+        android:gravity="right|center_vertical"
+        android:paddingRight="30px" />
+
+    <cn.yky.calendarevenview.view.CheckedStartAndEndMonthView
+        android:id="@+id/csaem_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:background="@android:color/white" />
+</LinearLayout>
