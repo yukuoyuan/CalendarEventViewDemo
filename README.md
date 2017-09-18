@@ -4,6 +4,7 @@
 主要业务逻辑在weekCalendarEventview 中
 
 ##效果图
+![效果图](https://github.com/yukuoyuan/CalendarEventViewDemo/blob/master/img/checktime.gif)
 
 ![效果图](https://github.com/yukuoyuan/CalendarEventViewDemo/blob/master/img/simple.gif)
 ##功能包含
@@ -12,6 +13,7 @@
 * 过去时间置灰展示
 * 事件区域事件的回调的监听
 * 空白可以点击的区域的时间回调监听
+* 选择开始和结束时间并返回
 ##代码的结构
 >src
 >>main
